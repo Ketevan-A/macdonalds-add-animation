@@ -148,7 +148,7 @@ function rotateX(callBack){
             if(callBack){
                 setTimeout(()=>{
                     callBack();
-                }, 1000);
+                }, 500);
             }
             return;
         }
@@ -184,7 +184,7 @@ function storerAnimation() {
     function helper() {
         if (growing) {
 
-            scale += (1.1 - scale) * 0.08; 
+            scale += (1.3 - scale) * 0.08; 
             if (scale >= 1.09) {
                 growing = false; 
             }
@@ -192,6 +192,7 @@ function storerAnimation() {
 
             //if growing is done
             scale += (1 - scale) * 0.1;
+
             //make it little bitbigger but then 
             //go down to scale one for bop effect
             if (Math.abs(scale - 1) < 0.001) {
@@ -237,7 +238,6 @@ function fadeOutTogether(callBack) {
 function coverBurger() {
 
     els.balls.forEach(ball => {
-
         ball.style.animationPlayState = "running"; 
 
     });
@@ -282,6 +282,8 @@ function coverBurger() {
 // loading the page <------ START 
 window.onload = () => {
         globalStartTime = performance.now();
-        animateBurger();
+        setTimeout(()=>{
+            animateBurger();
+        }, 700)
     
 }

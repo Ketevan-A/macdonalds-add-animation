@@ -1,3 +1,7 @@
+
+/*general styles for every
+ element and its body*/
+
 *{
     padding: 0;
     margin: 0;
@@ -8,7 +12,6 @@ body{
     align-items: center;
     margin:0;
     height: 100vh;
-    color: black;
 
 }
 .wrapper{
@@ -16,9 +19,11 @@ body{
     width: 500px;
     height: 1000px;
     overflow: hidden;
-    color: black;
+
     
 }
+
+/*background table image*/
 .background{
     position: absolute;
     width: 100%;
@@ -29,13 +34,48 @@ body{
     object-fit: cover;
 
 }
-.above-text{
+
+
+
+/*balls that covers burger and
+makes transitionto final composition*/
+.burger-cover > div {
     position: absolute;
-    top: 0;
-    z-index: 3;
-    
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #912021;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
 }
 
+/*each ball with different 
+opacity, delay and z-index*/
+#B1 { animation: growBall 1.2s ease-out forwards; --start-opacity: 0.2;   animation-delay: 0.2s; animation-play-state: paused;z-index: 1;}
+#B2 { animation: growBall 1.2s ease-out forwards; --start-opacity: 0.5; animation-delay: 0.4s; animation-play-state: paused; z-index: 1;}
+#B4 { animation: growBall 1.2s ease-out forwards; --start-opacity: 1; animation-delay: 0.7s; animation-play-state: paused; z-index: 3; }
+
+/*one of the ballswas ring*/
+#B3 {    border: 70px solid #912021; animation: growBall 1.2s ease-out forwards; --start-opacity: 0.4; animation-delay: 0.6s; animation-play-state: paused; z-index: 3; width:150px; height: 150px;}
+
+
+/*transition balls growing animation*/
+@keyframes growBall {
+    from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: var(--start-opacity);
+    }
+    to {
+        transform: translate(-50%, -50%) scale(8); 
+        opacity: 1;
+    }
+}
+
+
+/*burgers style and
+ appearing in the begining*/
 .burger{
     position: absolute;
     top: 50%;
@@ -44,6 +84,17 @@ body{
     opacity: 0;
     z-index: 2;
 }
+
+/*above burger texts general style*/
+.above-text{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    
+}
+
+
+/*above burgers furst text slide animation*/
 .text-1 {
     display: block;
     max-width: 100%;
@@ -60,27 +111,31 @@ body{
     display: block;
     max-width: 100%;
     opacity: 0;
-
     transition: opacity 1s ease;
 }
 
+/*logo and main text styles*/
 .below-burger{
     position: absolute;
     top: 0px;
     display: flex;
     justify-content: space-between;
-    z-index: 2;
+
 }
 .logo{
     position: absolute;
     opacity: 0;
     top:0;
-    z-index: 3;
+    z-index: 2;
 }
 .main-text{
     opacity: 0;
+    z-index: 4;
 }
 
+
+/*rotation x and 
+its mce text style*/
 .X{
     position: absolute;
     top: 5%;
@@ -96,6 +151,9 @@ body{
     transform: rotateY(270deg);
     opacity: 0;
 }
+
+
+/*cropped and whole storer styles*/
 .stoerer{
     position: absolute;
     width: 100%;
@@ -106,9 +164,41 @@ body{
 }
 .stoerer-cropped{
     position: absolute;
-    top: 23.5%;
+    top: 27.5%;
     left:8%;
+    animation: ease-in-out;
     opacity: 0;
+}
+
+/*final div style (logo and mceX text)*/
+.final{
+    position: absolute;
+    top: -10%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    opacity: 0;   
 
 
+}
+
+/*fial bi8g logo reveal with clip-path*/
+.main-logo{
+    width: 65%;
+    clip-path: inset( 0 0 100% 0);
+    z-index: 5;
+    transition: clip-path 1.5s ease;
+}
+
+
+.mceX{
+    width: 65%;
+    opacity: 0;
+}
+.main-logo.show{
+    clip-path: inset(0 0 0 0 );
 }

@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class = 'wrapper'>
-        <img class = 'background' src = 'img/background.jpg'>
-        <div class = "above-text">
-            
-            <img src = 'img/txt_1.png' class = 'text-1'>
-            <img src = 'img/txt_2.png' class = 'text-2'>
-            <img src = 'img/X.png' class = 'X'>
-            <img src="img/mce_treme.png" class = 'mce'>
-            <img src = 'img/stroerer.png' class = 'stoerer'>
-            <img src = 'img/stroerer_cropped.png' class = 'stoerer-cropped'>
+  <div class="wrapper">
+    <!-- ===== background ===== -->
+    <img class="background" src="img/background.jpg">
 
-        </div>
-        <div class = 'Burger-section'>
-            <img src = 'img/burger_original.png' class = 'burger'>
-        </div>
-        <div class =  'below-burger'>
-            <div class = 'main-text'>
-                <img src = 'img/claim.png'>
-            </div>
-            <div class = 'logo'>
-                <img src = 'img/logo.png'>
-            </div>
-        </div>
+    <!-- ===== above-burger texts (first animations) ===== -->
+    <div class="above-text">
+      <img src="img/txt_1.png" class="text-1">
+      <img src="img/txt_2.png" class="text-2">
+      <img src="img/X.png" class="X">
+      <img src="img/mce_treme.png" class="mce">
+      <img src="img/stroerer.png" class="stoerer">
+      <img src="img/stroerer_cropped.png" class="stoerer-cropped">
     </div>
-<script src="script.js"></script>
+
+    <!-- ===== burger section (burger + cover balls) ===== -->
+    <div class="Burger-section">
+      <div class="burger-cover">
+        <div id="B1"></div>
+        <div id="B2"></div>
+        <div id="B3"></div>
+        <div id="B4"></div>
+        <div id="B5"></div>
+      </div>
+      <img src="img/burger_original.png" class="burger">
+    </div>
+
+    <!-- ===== below-burger texts + logo ===== -->
+    <div class="below-burger">
+      <div class="main-text">
+        <img src="img/claim.png">
+      </div>
+      <div class="logo">
+        <img src="img/logo.png">
+      </div>
+    </div>
+
+    <!-- ===== final composition (big logo + MCE X) ===== -->
+    <div class="final">
+      <img src="img/logo.svg" class="main-logo">
+      <img src="img/mcextreme - Copy.png" class="mceX">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

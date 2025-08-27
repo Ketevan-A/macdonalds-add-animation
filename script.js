@@ -44,15 +44,15 @@ function fadeOut(el, duration = 500) {
 //begining of burger slide aimation
 function animateBurger() {
 
-    let startLeft = -1000;
+    let startLeft = -800;
     let endLeft = -500;
     let opacity = 0;
 
 
-    if (left < -500) {
+    if (left < -470) {
         
         //burger slide algorithm
-        left += 8;
+        left += 6;
         opacity = (left - startLeft) / (endLeft - startLeft );
         els.burger.style.left = left + 'px';
         els.burger.style.opacity = opacity;
@@ -68,7 +68,7 @@ function animateBurger() {
     } else {
 
         // stop burger at final position and make it fully visible
-        els.burger.style.left = '-500px';
+        els.burger.style.left = '-470px';
         els.burger.style.opacity = 1;
         els.logo.style.opacity = 1;
         els.belowText.style.opacity = 1;
@@ -284,6 +284,6 @@ window.onload = () => {
         globalStartTime = performance.now();
         setTimeout(()=>{
             animateBurger();
-        }, 700)
+        }, 400)
     
 }

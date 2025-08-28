@@ -101,7 +101,7 @@ function animateText() {
 
             fadeOutTogether(rotateX(storerAnimation));
 
-        }, 1500); 
+        }, 1350); 
         
     }, 800);
 }

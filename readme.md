@@ -50,9 +50,3 @@ Your submission will be evaluated based on the following:
 
 Once you've completed the task, make a final commit with the message `FINAL` and push your changes directly to this repository.
 
-## Troubleshooting
-
-- Ensure your animation works across modern browsers (e.g., Chrome, Firefox, Microsoft Edge).
-- If you run into any issues or have questions, feel free to reach out to Luka at luka@codevelop.io.
-
-We can’t wait to see your results! Pay attention to the details, and good luck! 🐞💻🍀
